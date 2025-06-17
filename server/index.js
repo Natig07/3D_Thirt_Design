@@ -7,9 +7,6 @@ import geminiRoutes from './routes/gemini.routes.js';
 dotenv.config();
 
 const app = express();
-
-import cors from "cors";
-
 const allowedOrigins = [
   "https://3-d-thirt-design-duqh.vercel.app", 
   "http://localhost:5173" 
