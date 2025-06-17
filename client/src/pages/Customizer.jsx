@@ -67,7 +67,7 @@ const Customizer = () => {
         //call our backend to generate an ai image!
         setGeneratingImg(true);
 
-        const response = await fetch('http://localhost:8080/api/v1/gemini',
+        const response = await fetch('https://threed-thirt-design.onrender.com/api/v1/gemini',
           {
             method:'POST',
             headers:{
