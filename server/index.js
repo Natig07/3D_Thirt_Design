@@ -8,7 +8,18 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
+import cors from "cors";
+
+const allowedOrigins = [
+  "https://3-d-thirt-design-duqh.vercel.app", 
+  "http://localhost:5173" 
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true 
+}));
+
 app.use(express.json({limit: "50mb"}))
 
 app.use('/api/v1/gemini', geminiRoutes);
